@@ -6,11 +6,12 @@ $maks = ".\maks.csv"
 $newcsv = {} | Select "NameFull","PhoneNumber","AddressLine1","City","DemographicsGender","OwnRent","MaritalStatus","ChildrenAgeRange","DateOfBirth","DateOfDeath" | Export-Csv $outfile
 $newcsvmaks = {} | Select "MAK" | Export-Csv $maks
 $Addresses = Import-Csv -Path ".\Addresses.csv"
+$City = 'Arlington'
 
 foreach ($a in $Addresses | select -ExpandProperty Street) {
     $headers=@{}
     #$json = Invoke-WebRequest -Uri "https://api.versium.com/v1.0/address?campaign=BASIC&address=$A&city=Arlington&state=TX&country=US&key=b0178d5b-f0d8-48ce-9a87-1a66da31d914" -Method GET -Headers $header
-    $json2 = Invoke-WebRequest -Uri "https://www.melissa.com/v2/lookups/addresssearch/?number=&street=$a+Ct&city=Pantego&state=TX&zip=&freeForm=Pompano+%0D%0APantego+TX&fmt=json&id=lLqW0h1QWDvdbhZxF0rJy0**nSAcwXpxhQ0PC2lXxuDAZ-**" -Method GET -Headers $header
+    $json2 = Invoke-WebRequest -Uri "https://www.melissa.com/v2/lookups/addresssearch/?number=&street=$a+Ct&city=$City&state=TX&zip=&freeForm=Pompano+%0D%0APantego+TX&fmt=json&id=lLqW0h1QWDvdbhZxF0rJy0**nSAcwXpxhQ0PC2lXxuDAZ-**" -Method GET -Headers $header
     $jsonobj1 = $json2.content | ConvertFrom-Json
     $table2 = $jsonobj1 | ForEach-Object {
         [PSCustomObject] @{

@@ -1,0 +1,9 @@
+#TYPE Selected.System.Management.Automation.ScriptBlock
+"NameFull","PhoneNumber","AddressLine1","City","DemographicsGender","OwnRent","MaritalStatus","ChildrenAgeRange","DateOfBirth","DateOfDeath"
+,,,,,,,,,
+"Ray Belken","","700 Bowen Ct","Arlington","Male",,"Possibly Married"," "," "," "
+"Edward Redmond","817-277-2032","702 Bowen Ct","Arlington","Male",,"Definitely Married"," ","195901"," "
+"Mellissa Coombs","","704 Bowen Ct","Arlington","Female",,"Possibly Married"," "," "," "
+"Neill Bronstein","","706 Bowen Ct","Arlington","Male",,"Definitely Married"," ","194902"," "
+"Pamela Edmondson","817-226-2881","708 Bowen Ct","Arlington","Female",,"Definitely Single"," ","194308"," "
+"Christopher Raspante","","710 Bowen Ct","Arlington","Male",,"Definitely Married"," ","197305"," "
